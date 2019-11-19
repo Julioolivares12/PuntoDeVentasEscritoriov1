@@ -1,0 +1,15 @@
+C:\Users\julio\source\repos\PuntoDeVentas\Modelos\bin\Debug\Modelos.dll
+C:\Users\julio\source\repos\PuntoDeVentas\Modelos\bin\Debug\Modelos.pdb
+C:\Users\julio\source\repos\PuntoDeVentas\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
+C:\Users\julio\source\repos\PuntoDeVentas\Modelos\obj\Debug\Modelos.dll
+C:\Users\julio\source\repos\PuntoDeVentas\Modelos\obj\Debug\Modelos.pdb
+C:\Users\rbkit\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\2\PuntoDeVentas\Modelos\bin\Debug\Modelos.dll
+C:\Users\rbkit\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\2\PuntoDeVentas\Modelos\bin\Debug\Modelos.pdb
+C:\Users\rbkit\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\2\PuntoDeVentas\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
+C:\Users\rbkit\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\2\PuntoDeVentas\Modelos\obj\Debug\Modelos.dll
+C:\Users\rbkit\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\2\PuntoDeVentas\Modelos\obj\Debug\Modelos.pdb
+C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Modelos\bin\Debug\Modelos.dll
+C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Modelos\bin\Debug\Modelos.pdb
+C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
+C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Modelos\obj\Debug\Modelos.dll
+C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Modelos\obj\Debug\Modelos.pdb
