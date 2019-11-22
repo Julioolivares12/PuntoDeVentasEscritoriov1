@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PuntoDeVentas.DataSets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace PuntoDeVentas.VistaReportes
 
         private void ClienteCompraMas_Load(object sender, EventArgs e)
         {
-
+            this.sp_reporte_cliente_que_compra_masTableAdapter1.Fill(new ReportesDataSet.sp_reporte_cliente_que_compra_masDataTable());
             this.reportViewer1.RefreshReport();
         }
     }

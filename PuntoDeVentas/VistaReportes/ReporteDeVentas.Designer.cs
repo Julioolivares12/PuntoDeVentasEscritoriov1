@@ -30,13 +30,14 @@
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePickerFechaInicial = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAhora = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaInicial = new System.Windows.Forms.DateTimePicker();
+            this.sp_reporte_ventasTableAdapter1 = new PuntoDeVentas.DataSets.ReportesDataSetTableAdapters.sp_reporte_ventasTableAdapter();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,19 +65,47 @@
             this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 1;
             // 
-            // dateTimePickerFechaInicial
+            // btnAhora
             // 
-            this.dateTimePickerFechaInicial.Location = new System.Drawing.Point(57, 191);
-            this.dateTimePickerFechaInicial.Name = "dateTimePickerFechaInicial";
-            this.dateTimePickerFechaInicial.Size = new System.Drawing.Size(143, 20);
-            this.dateTimePickerFechaInicial.TabIndex = 0;
+            this.btnAhora.Location = new System.Drawing.Point(57, 313);
+            this.btnAhora.Name = "btnAhora";
+            this.btnAhora.Size = new System.Drawing.Size(75, 23);
+            this.btnAhora.TabIndex = 6;
+            this.btnAhora.Text = "Ahora";
+            this.btnAhora.UseVisualStyleBackColor = true;
+            this.btnAhora.Click += new System.EventHandler(this.btnAhora_Click);
             // 
-            // dateTimePickerFechaFinal
+            // btnBuscar
             // 
-            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(59, 226);
-            this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
-            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(143, 20);
-            this.dateTimePickerFechaFinal.TabIndex = 1;
+            this.btnBuscar.Location = new System.Drawing.Point(59, 268);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.Text = "buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(7, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Hasta";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(3, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Desde";
             // 
             // label1
             // 
@@ -89,47 +118,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Ventas";
             // 
-            // label2
+            // dateTimePickerFechaFinal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(3, 191);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Desde";
+            this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(59, 226);
+            this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
+            this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(143, 20);
+            this.dateTimePickerFechaFinal.TabIndex = 1;
             // 
-            // label3
+            // dateTimePickerFechaInicial
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(7, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Hasta";
+            this.dateTimePickerFechaInicial.Location = new System.Drawing.Point(57, 191);
+            this.dateTimePickerFechaInicial.Name = "dateTimePickerFechaInicial";
+            this.dateTimePickerFechaInicial.Size = new System.Drawing.Size(143, 20);
+            this.dateTimePickerFechaInicial.TabIndex = 0;
             // 
-            // btnBuscar
+            // sp_reporte_ventasTableAdapter1
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(59, 268);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.Text = "buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnAhora
-            // 
-            this.btnAhora.Location = new System.Drawing.Point(57, 313);
-            this.btnAhora.Name = "btnAhora";
-            this.btnAhora.Size = new System.Drawing.Size(75, 23);
-            this.btnAhora.TabIndex = 6;
-            this.btnAhora.Text = "Ahora";
-            this.btnAhora.UseVisualStyleBackColor = true;
-            this.btnAhora.Click += new System.EventHandler(this.btnAhora_Click);
+            this.sp_reporte_ventasTableAdapter1.ClearBeforeFill = true;
             // 
             // ReporteDeVentas
             // 
@@ -158,5 +163,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinal;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicial;
+        private DataSets.ReportesDataSetTableAdapters.sp_reporte_ventasTableAdapter sp_reporte_ventasTableAdapter1;
     }
 }

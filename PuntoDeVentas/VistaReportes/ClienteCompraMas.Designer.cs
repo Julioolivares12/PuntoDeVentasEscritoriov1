@@ -29,16 +29,22 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.sp_reporte_cliente_que_compra_masTableAdapter1 = new PuntoDeVentas.DataSets.ReportesDataSetTableAdapters.sp_reporte_cliente_que_compra_masTableAdapter();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PuntoDeVentas.reportes.ClienteCompraMas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(983, 676);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // sp_reporte_cliente_que_compra_masTableAdapter1
+            // 
+            this.sp_reporte_cliente_que_compra_masTableAdapter1.ClearBeforeFill = true;
             // 
             // ClienteCompraMas
             // 
@@ -56,5 +62,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DataSets.ReportesDataSetTableAdapters.sp_reporte_cliente_que_compra_masTableAdapter sp_reporte_cliente_que_compra_masTableAdapter1;
     }
 }
