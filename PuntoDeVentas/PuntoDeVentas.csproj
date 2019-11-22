@@ -88,6 +88,12 @@
     <Compile Include="Administrador\MarcasVehiculos.Designer.cs">
       <DependentUpon>MarcasVehiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\MenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\MenuAdministrador.Designer.cs">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\ModeloVehiculocs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,11 @@
     <Compile Include="Busqueda\BuscarProductos.Designer.cs">
       <DependentUpon>BuscarProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\ReportesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +168,30 @@
     <Compile Include="Vendedor\PuntoDeVenta.Designer.cs">
       <DependentUpon>PuntoDeVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaReportes\ClienteCompraMas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaReportes\ClienteCompraMas.Designer.cs">
+      <DependentUpon>ClienteCompraMas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaReportes\ProductoMasVendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaReportes\ProductoMasVendido.Designer.cs">
+      <DependentUpon>ProductoMasVendido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaReportes\ProductoMenosVendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaReportes\ProductoMenosVendido.Designer.cs">
+      <DependentUpon>ProductoMenosVendido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaReportes\ReporteDeVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaReportes\ReporteDeVentas.Designer.cs">
+      <DependentUpon>ReporteDeVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador\Cargos.resx">
       <DependentUpon>Cargos.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\MarcasVehiculos.resx">
       <DependentUpon>MarcasVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\MenuAdministrador.resx">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\ModeloVehiculocs.resx">
       <DependentUpon>ModeloVehiculocs.cs</DependentUpon>
@@ -209,9 +247,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportes\ReporteDeVentas.rdlc" />
     <EmbeddedResource Include="Vendedor\PuntoDeVenta.resx">
       <DependentUpon>PuntoDeVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistaReportes\ClienteCompraMas.resx">
+      <DependentUpon>ClienteCompraMas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaReportes\ProductoMasVendido.resx">
+      <DependentUpon>ProductoMasVendido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaReportes\ProductoMenosVendido.resx">
+      <DependentUpon>ProductoMenosVendido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaReportes\ReporteDeVentas.resx">
+      <DependentUpon>ReporteDeVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSets\ReportesDataSet.xsc">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\ReportesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportesDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\ReportesDataSet.xss">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -268,5 +330,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

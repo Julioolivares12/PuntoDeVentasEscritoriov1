@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PuntoDeVentas.DataSets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,20 @@ namespace PuntoDeVentas.VistaReportes
 
         private void ReporteDeVentas_Load(object sender, EventArgs e)
         {
-
+            
             this.reportViewer1.RefreshReport();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAhora_Click(object sender, EventArgs e)
+        {
+            var inicio = DateTime.Today;
+            var final = DateTime.Now;
+            
         }
     }
 }
