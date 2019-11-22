@@ -13,11 +13,19 @@ namespace PuntoDeVentas
 {
     public partial class Login : Form
     {
+        private static Login login;
         public Login()
         {
             InitializeComponent();
         }
-
+       public static Login GetInstance()
+        {
+            if(login == null)
+            {
+                login = new Login();
+            }
+            return login;
+        }
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             var correo = txtEmail.Text;
