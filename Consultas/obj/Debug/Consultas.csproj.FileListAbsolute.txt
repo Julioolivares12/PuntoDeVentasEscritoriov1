@@ -30,3 +30,11 @@ C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Cons
 C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.csproj.CopyComplete
 C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.dll
 C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.pdb
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Consultas.dll
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Consultas.pdb
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Modelos.dll
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Modelos.pdb
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.csprojAssemblyReference.cache
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.csproj.CopyComplete
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.dll
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.pdb

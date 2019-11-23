@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
+    <Compile Include="Cargo.cs" />
     <Compile Include="ClaseDeVehiculo.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Cliente.cs" />

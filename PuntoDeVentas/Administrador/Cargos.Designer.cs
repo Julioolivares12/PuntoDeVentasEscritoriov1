@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtBuscarCargo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.gridCargo = new System.Windows.Forms.DataGridView();
@@ -37,9 +38,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnActualizarCargo = new System.Windows.Forms.Button();
             this.btnBorrarCargo = new System.Windows.Forms.Button();
-            this.btnLimpiarCargo = new System.Windows.Forms.Button();
             this.btnCrearCargo = new System.Windows.Forms.Button();
+            this.repuestos3DataSet = new PuntoDeVentas.repuestos3DataSet();
+            this.cARGOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cARGOSTableAdapter = new PuntoDeVentas.repuestos3DataSetTableAdapters.CARGOSTableAdapter();
+            this.iDCARGODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRIPCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridCargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repuestos3DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cARGOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscarCargo
@@ -62,11 +70,18 @@
             // 
             // gridCargo
             // 
+            this.gridCargo.AutoGenerateColumns = false;
             this.gridCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridCargo.Location = new System.Drawing.Point(388, 109);
+            this.gridCargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCARGODataGridViewTextBoxColumn,
+            this.nOMBREDataGridViewTextBoxColumn,
+            this.dESCRIPCIONDataGridViewTextBoxColumn});
+            this.gridCargo.DataSource = this.cARGOSBindingSource;
+            this.gridCargo.Location = new System.Drawing.Point(399, 122);
             this.gridCargo.Name = "gridCargo";
-            this.gridCargo.Size = new System.Drawing.Size(345, 120);
+            this.gridCargo.Size = new System.Drawing.Size(348, 144);
             this.gridCargo.TabIndex = 204;
+            this.gridCargo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCargo_CellContentClick);
             // 
             // txtDescripCargo
             // 
@@ -108,13 +123,14 @@
             this.btnActualizarCargo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnActualizarCargo.FlatAppearance.BorderSize = 2;
             this.btnActualizarCargo.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarCargo.Location = new System.Drawing.Point(268, 261);
+            this.btnActualizarCargo.Location = new System.Drawing.Point(332, 313);
             this.btnActualizarCargo.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizarCargo.Name = "btnActualizarCargo";
             this.btnActualizarCargo.Size = new System.Drawing.Size(92, 33);
             this.btnActualizarCargo.TabIndex = 199;
             this.btnActualizarCargo.Text = "Actualizar";
             this.btnActualizarCargo.UseVisualStyleBackColor = false;
+            this.btnActualizarCargo.Click += new System.EventHandler(this.btnActualizarCargo_Click);
             // 
             // btnBorrarCargo
             // 
@@ -122,27 +138,14 @@
             this.btnBorrarCargo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnBorrarCargo.FlatAppearance.BorderSize = 2;
             this.btnBorrarCargo.ForeColor = System.Drawing.Color.Black;
-            this.btnBorrarCargo.Location = new System.Drawing.Point(429, 261);
+            this.btnBorrarCargo.Location = new System.Drawing.Point(493, 313);
             this.btnBorrarCargo.Margin = new System.Windows.Forms.Padding(2);
             this.btnBorrarCargo.Name = "btnBorrarCargo";
             this.btnBorrarCargo.Size = new System.Drawing.Size(95, 33);
             this.btnBorrarCargo.TabIndex = 198;
             this.btnBorrarCargo.Text = "Borrar";
             this.btnBorrarCargo.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpiarCargo
-            // 
-            this.btnLimpiarCargo.BackColor = System.Drawing.Color.Yellow;
-            this.btnLimpiarCargo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnLimpiarCargo.FlatAppearance.BorderSize = 2;
-            this.btnLimpiarCargo.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiarCargo.Location = new System.Drawing.Point(589, 261);
-            this.btnLimpiarCargo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLimpiarCargo.Name = "btnLimpiarCargo";
-            this.btnLimpiarCargo.Size = new System.Drawing.Size(91, 33);
-            this.btnLimpiarCargo.TabIndex = 197;
-            this.btnLimpiarCargo.Text = "Limpiar";
-            this.btnLimpiarCargo.UseVisualStyleBackColor = false;
+            this.btnBorrarCargo.Click += new System.EventHandler(this.btnBorrarCargo_Click);
             // 
             // btnCrearCargo
             // 
@@ -150,19 +153,53 @@
             this.btnCrearCargo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnCrearCargo.FlatAppearance.BorderSize = 2;
             this.btnCrearCargo.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearCargo.Location = new System.Drawing.Point(115, 261);
+            this.btnCrearCargo.Location = new System.Drawing.Point(179, 313);
             this.btnCrearCargo.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearCargo.Name = "btnCrearCargo";
             this.btnCrearCargo.Size = new System.Drawing.Size(96, 33);
             this.btnCrearCargo.TabIndex = 196;
             this.btnCrearCargo.Text = "Crear";
             this.btnCrearCargo.UseVisualStyleBackColor = false;
+            this.btnCrearCargo.Click += new System.EventHandler(this.btnCrearCargo_Click);
+            // 
+            // repuestos3DataSet
+            // 
+            this.repuestos3DataSet.DataSetName = "repuestos3DataSet";
+            this.repuestos3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cARGOSBindingSource
+            // 
+            this.cARGOSBindingSource.DataMember = "CARGOS";
+            this.cARGOSBindingSource.DataSource = this.repuestos3DataSet;
+            // 
+            // cARGOSTableAdapter
+            // 
+            this.cARGOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDCARGODataGridViewTextBoxColumn
+            // 
+            this.iDCARGODataGridViewTextBoxColumn.DataPropertyName = "ID_CARGO";
+            this.iDCARGODataGridViewTextBoxColumn.HeaderText = "ID_CARGO";
+            this.iDCARGODataGridViewTextBoxColumn.Name = "iDCARGODataGridViewTextBoxColumn";
+            this.iDCARGODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nOMBREDataGridViewTextBoxColumn
+            // 
+            this.nOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE";
+            this.nOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE";
+            this.nOMBREDataGridViewTextBoxColumn.Name = "nOMBREDataGridViewTextBoxColumn";
+            // 
+            // dESCRIPCIONDataGridViewTextBoxColumn
+            // 
+            this.dESCRIPCIONDataGridViewTextBoxColumn.DataPropertyName = "DESCRIPCION";
+            this.dESCRIPCIONDataGridViewTextBoxColumn.HeaderText = "DESCRIPCION";
+            this.dESCRIPCIONDataGridViewTextBoxColumn.Name = "dESCRIPCIONDataGridViewTextBoxColumn";
             // 
             // Cargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(796, 376);
             this.Controls.Add(this.txtBuscarCargo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gridCargo);
@@ -172,11 +209,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnActualizarCargo);
             this.Controls.Add(this.btnBorrarCargo);
-            this.Controls.Add(this.btnLimpiarCargo);
             this.Controls.Add(this.btnCrearCargo);
             this.Name = "Cargos";
             this.Text = "Cargos";
+            this.Load += new System.EventHandler(this.Cargos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridCargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repuestos3DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cARGOSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +232,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnActualizarCargo;
         private System.Windows.Forms.Button btnBorrarCargo;
-        private System.Windows.Forms.Button btnLimpiarCargo;
         private System.Windows.Forms.Button btnCrearCargo;
+        private repuestos3DataSet repuestos3DataSet;
+        private System.Windows.Forms.BindingSource cARGOSBindingSource;
+        private repuestos3DataSetTableAdapters.CARGOSTableAdapter cARGOSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCARGODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOMBREDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dESCRIPCIONDataGridViewTextBoxColumn;
     }
 }

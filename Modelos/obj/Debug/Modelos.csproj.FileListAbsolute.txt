@@ -18,3 +18,8 @@ C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Modelos\bin\Debug\Modelo
 C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
 C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Modelos\obj\Debug\Modelos.dll
 C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Modelos\obj\Debug\Modelos.pdb
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Modelos\bin\Debug\Modelos.dll
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Modelos\bin\Debug\Modelos.pdb
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Modelos\obj\Debug\Modelos.dll
+C:\Users\rbkit\source\repos\PuntoDeVentasEscritoriov1\Modelos\obj\Debug\Modelos.pdb
