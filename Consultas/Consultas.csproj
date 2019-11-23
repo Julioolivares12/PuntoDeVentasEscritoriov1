@@ -45,6 +45,7 @@
     <Compile Include="CBusquedaClientes.cs" />
     <Compile Include="CBusquedaRepuestos.cs" />
     <Compile Include="CCargo.cs" />
+    <Compile Include="CClaseDeVehiculo.cs" />
     <Compile Include="CCliente.cs" />
     <Compile Include="CEmpleado.cs" />
     <Compile Include="CLogin.cs" />
