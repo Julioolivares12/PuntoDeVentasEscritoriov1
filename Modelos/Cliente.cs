@@ -4,16 +4,14 @@ using System.Text;
 
 namespace Models
 {
-   public class Cliente
+   public class Cliente: Persona
     {
-        public string ID { get; set; }
-        public string PRIMERNOMBRE { get; set; }
-        public string SEGUNDONOMBRE { get; set; }
-        public string PRIMERAPELLIDO { get; set; }
-        public string SEGUNDOAPELLIDO { get; set; }
-        public string FECHANAC { get; set; }
-        public string SEXO { get; set; }
-        public string ESTADO_CIVIL { get; set; }
         public string LUGARTRABAJO { get; set; }
+        public string DUI { get; set; }
+        public string TEL_CASA { get; set; }
+        public string TEL_TRABAJO { get; set; }
+        public string CELULAR { get; set; }
+        public string DIRECCIONCASA { get; set; }
+        public string NIT { get; set; }
     }
 }
