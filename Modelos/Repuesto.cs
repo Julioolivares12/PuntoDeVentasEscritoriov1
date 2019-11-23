@@ -8,7 +8,7 @@ namespace Models
     {
         public int ID_PARTEVEH { get; set; }
         public int ID_MARCAVEH { get; set; }
-        public string Nombe { get; set; }
+        public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public double PrecioCompra { get; set; }
         public double PrecioVenta { get; set; }

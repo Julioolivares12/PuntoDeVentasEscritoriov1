@@ -54,7 +54,7 @@ namespace PuntoDeVentas.Vendedor
                     var item = CRepuestos.GetRepuestoByUPC(txtItem.Text);
                     fila.CreateCells(dgvItems);
                     fila.Cells[0].Value = item.UPC;
-                    fila.Cells[1].Value = item.Nombe;
+                    fila.Cells[1].Value = item.Nombre;
                     fila.Cells[2].Value = item.Cantidad;
                     fila.Cells[3].Value = item.Descuento;
                     fila.Cells[4].Value = item.PrecioVenta;

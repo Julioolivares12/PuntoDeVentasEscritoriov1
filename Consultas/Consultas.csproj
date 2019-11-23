@@ -54,6 +54,7 @@
     <Compile Include="CMetodosTomar.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="CParteVehiculo.cs" />
+    <Compile Include="CPerfiles.cs" />
     <Compile Include="CRepuestos.cs" />
     <Compile Include="CVentas.cs" />
     <Compile Include="Encriptar.cs" />
