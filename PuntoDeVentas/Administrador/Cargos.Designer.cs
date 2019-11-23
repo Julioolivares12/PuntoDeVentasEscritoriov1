@@ -82,6 +82,8 @@
             this.gridCargo.Size = new System.Drawing.Size(348, 144);
             this.gridCargo.TabIndex = 204;
             this.gridCargo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCargo_CellContentClick);
+            this.gridCargo.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridCargo_CellMouseClick);
+            this.gridCargo.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.gridCargo_RowStateChanged);
             // 
             // txtDescripCargo
             // 

@@ -29,6 +29,21 @@ namespace PuntoDeVentas.Administrador
 
         private void btnActualizarCargo_Click(object sender, EventArgs e)
         {
+            var cargo = new Cargo();
+            cargo.ID = getID();
+
+            cargo.Nombre = txtNombCargo.Text;
+            cargo.Descripcion = txtDescripCargo.Text;
+
+            var rs = CCargo.ActualizarCargo(cargo);
+            if (rs > 0)
+            {
+                MessageBox.Show("registro actualizado");
+            }
+            else
+            {
+                MessageBox.Show("Ocurio un error");
+            }
 
         }
 
@@ -64,6 +79,39 @@ namespace PuntoDeVentas.Administrador
             // TODO: esta línea de código carga datos en la tabla 'repuestos3DataSet.CARGOS' Puede moverla o quitarla según sea necesario.
             this.cARGOSTableAdapter.Fill(this.repuestos3DataSet.CARGOS);
 
+        }
+
+        public int getID()
+        {
+
+            try
+            {
+                return Convert.ToInt32(gridCargo.Rows[gridCargo.CurrentRow.Index].Cells[0].Value.ToString());
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        private void gridCargo_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var id = getID();
+
+            var cargo = CCargo.getCargoId(id);
+
+            txtNombCargo.Text = cargo.Nombre;
+            txtDescripCargo.Text = cargo.Descripcion;
+        }
+
+        private void gridCargo_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (e.StateChanged != DataGridViewElementStates.Selected) return;
+            var id = getID();
+
+            var cargo = CCargo.getCargoId(id);
+            txtNombCargo.Text = cargo.Nombre;
+            txtDescripCargo.Text = cargo.Descripcion;
         }
     }
 }
