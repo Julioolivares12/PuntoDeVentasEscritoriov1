@@ -52,6 +52,7 @@
     <Compile Include="CMarcaVehiculo.cs" />
     <Compile Include="CMetodosDar.cs" />
     <Compile Include="CMetodosTomar.cs" />
+    <Compile Include="CModeloDeVehiculo.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="CParteVehiculo.cs" />
     <Compile Include="CPerfiles.cs" />
