@@ -20,7 +20,6 @@ namespace Consultas
                 cmd.CommandText = "INSERT INTO VENTAS"+
                                    "(ID_USUARIO"+
                                    ",ID_CLIENTE"+
-                                   ",ID_REPUESTOS"+
                                    ",NRODOC"+
                                    ",ID_TIPODOC"+
                                    ",NRO_CF"+
@@ -28,10 +27,10 @@ namespace Consultas
                                    ",SUBTOTAL"+
                                    ",DESCUENTO"+
                                    ",IVA"+
-                                   ",MONTOTOTAL)"+
+                                   ",MONTOTOTAL)"+ "values"+
                                    "(@ID_USUARIO,"+
                                    "@ID_CLIENTE,"+
-                                   "@ID_REPUESTOS,"+
+                                   
                                    "@NRODOC,"+
                                    "@ID_TIPODOC,"+
                                    "@NRO_CF,"+
@@ -44,7 +43,7 @@ namespace Consultas
                                 SqlParameter[] parameters = {
                                     new SqlParameter("@ID_USUARIO",venta.ID_USUARIO),
                                     new SqlParameter("@ID_CLIENTE",venta.ID_CLIENTE),
-                                    new SqlParameter("@ID_REPUESTOS",venta.ID_REPUESTOS),
+                                    
                                     new SqlParameter("@NRODOC",venta.NRODOC),
                                     new SqlParameter("@ID_TIPODOC",venta.ID_TIPODOC),
                                     new SqlParameter("@NRO_CF",venta.NRO_CF),
@@ -59,7 +58,7 @@ namespace Consultas
                 cmd.Parameters.AddRange(parameters);
                 cmd.CommandType = CommandType.Text;
 
-                var id = Convert.ToInt32(cmd.ExecuteScalar());
+                var id = Convert.ToInt32(cmd.ExecuteNonQuery());
                 return id;
             }
         }

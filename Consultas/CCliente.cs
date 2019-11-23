@@ -47,7 +47,7 @@ namespace Consultas
             
             using (var con = Conexion.GetConnection())
             {
-                using (var adapter = new SqlDataAdapter("SELECT ID_CLIENTE as id , PRIMERNOMBRE +' '+PRIMERAPELLIDO as cliente FROM CLIENTES",con))
+                using (var adapter = new SqlDataAdapter("SELECT ID_CLIENTE , PRIMERNOMBRE +' '+PRIMERAPELLIDO as cliente FROM CLIENTES",con))
                 {
                     var dt = new DataTable();
                     adapter.Fill(dt);

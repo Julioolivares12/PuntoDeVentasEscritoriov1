@@ -80,6 +80,7 @@ namespace PuntoDeVentas.Vendedor
         private void BtnBuscarCliente_Click(object sender, EventArgs e)
         {
             Busqueda.BuscarClientes buscar = new Busqueda.BuscarClientes();
+            buscar.ShowDialog();
             if (buscar.DialogResult == DialogResult.OK)
             {
                 idCliente = buscar.IdCliente;
@@ -98,6 +99,7 @@ namespace PuntoDeVentas.Vendedor
         private void BtnBuscarItem_Click(object sender, EventArgs e)
         {
             Busqueda.BuscarProductos buscarProductos = new Busqueda.BuscarProductos();
+            buscarProductos.ShowDialog();
             if (buscarProductos.DialogResult == DialogResult.OK)
             {
                 repuesto = buscarProductos.repuesto;
@@ -329,7 +331,8 @@ namespace PuntoDeVentas.Vendedor
 
         private void cargarClientesComboBox()
         {
-            CB_Clientes.ValueMember = "id";
+            
+            CB_Clientes.ValueMember = "ID_CLIENTE";
             CB_Clientes.DisplayMember = "cliente";
             CB_Clientes.DataSource = CCliente.GetClientesComboBox();
         }
@@ -350,7 +353,9 @@ namespace PuntoDeVentas.Vendedor
 
         private void CB_Clientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var i = CB_Clientes.SelectedIndex;
+            var id =Convert.ToInt32(CB_Clientes.Items[i].ToString());
+            idCliente = id;
         }
     }
 }
