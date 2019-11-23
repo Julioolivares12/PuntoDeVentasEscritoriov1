@@ -130,6 +130,9 @@
     <Compile Include="Busqueda\BuscarProductos.Designer.cs">
       <DependentUpon>BuscarProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\ReportesDataSet.cs">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\ReportesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,7 +250,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportes\ClienteCompraMas.rdlc" />
+    <EmbeddedResource Include="reportes\ProductoMasVendido.rdlc" />
     <EmbeddedResource Include="reportes\ReporteDeVentas.rdlc" />
+    <EmbeddedResource Include="reportes\ReporteProductoMenosVendido.rdlc" />
     <EmbeddedResource Include="Vendedor\PuntoDeVenta.resx">
       <DependentUpon>PuntoDeVenta.cs</DependentUpon>
     </EmbeddedResource>

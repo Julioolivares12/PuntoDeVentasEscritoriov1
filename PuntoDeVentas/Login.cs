@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PuntoDeVentas.Vendedor;
+using PuntoDeVentas.Administrador;
 
 namespace PuntoDeVentas
 {
@@ -48,7 +49,9 @@ namespace PuntoDeVentas
                             else if (login.Perfil.Equals("administrador"))
                             {
                                 //falta administrador
-                                MessageBox.Show("login con  exito");
+                                this.Hide();
+                                var MenuAdministrador = new MenuAdministrador();
+                                MenuAdministrador.Show();
                             }
 
                         }

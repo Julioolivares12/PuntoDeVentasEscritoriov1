@@ -9,7 +9,7 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.17736cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -377,21 +377,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="NombredeCliente">
+                    <Textbox Name="NombreCliente">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Nombre de Cliente.Value</Value>
+                              <Value>=Fields!NombreCliente.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>NombredeCliente</rd:DefaultName>
+                      <rd:DefaultName>NombreCliente</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -407,21 +407,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Repuesto">
+                    <Textbox Name="Repuestp">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Repuesto.Value</Value>
+                              <Value>=Fields!Repuestp.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Repuesto</rd:DefaultName>
+                      <rd:DefaultName>Repuestp</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -433,6 +433,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -677,7 +678,7 @@
         <Top>2.22082cm</Top>
         <Left>1.04667cm</Left>
         <Height>1.2cm</Height>
-        <Width>25cm</Width>
+        <Width>26.67736cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -814,12 +815,12 @@
           <DataField>PRECIOUNITARIO</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="Nombre de Cliente">
-          <DataField>Nombre de Cliente</DataField>
+        <Field Name="NombreCliente">
+          <DataField>NombreCliente</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Repuesto">
-          <DataField>Repuesto</DataField>
+        <Field Name="Repuestp">
+          <DataField>Repuestp</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

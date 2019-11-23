@@ -22,3 +22,11 @@ C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Consultas\obj\Debug\Co
 C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Consultas\obj\Debug\Consultas.csproj.CopyComplete
 C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Consultas\obj\Debug\Consultas.dll
 C:\Users\julio\Desktop\ProyectoElectiva4\v2\PuntoDeVentas\Consultas\obj\Debug\Consultas.pdb
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Consultas.dll
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Consultas.pdb
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Modelos.dll
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\bin\Debug\Modelos.pdb
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.csprojAssemblyReference.cache
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.csproj.CopyComplete
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.dll
+C:\Users\julio\Desktop\github\PuntoDeVentasEscritoriov1\Consultas\obj\Debug\Consultas.pdb

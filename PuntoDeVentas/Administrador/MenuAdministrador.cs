@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PuntoDeVentas.VistaReportes;
 
 namespace PuntoDeVentas.Administrador
 {
@@ -188,6 +189,89 @@ namespace PuntoDeVentas.Administrador
         {
             this.Close();
             Login.GetInstance().Show();
+        }
+        ReporteDeVentas reporteDeVentas;
+        private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (reporteDeVentas == null)
+            {
+                reporteDeVentas = new ReporteDeVentas();
+                reporteDeVentas.MdiParent = this;
+                reporteDeVentas.FormClosed += new  FormClosedEventHandler(cerrarReporteVentas);
+                reporteDeVentas.Show();
+            }
+            else
+            {
+                reporteDeVentas.Activate();
+            }
+        }
+
+        private void cerrarReporteVentas(object sender, FormClosedEventArgs e)
+        {
+            reporteDeVentas = null;
+        }
+
+        ProductoMasVendido productoMasVendido;
+        private void productoMasVendidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (productoMasVendido == null)
+            {
+                productoMasVendido = new ProductoMasVendido();
+                productoMasVendido.MdiParent = this;
+                productoMasVendido.FormClosed += new FormClosedEventHandler(cerrarProductoMasVendido);
+                productoMasVendido.Show();
+            }
+            else
+            {
+                productoMasVendido.Activate();
+            }
+        }
+
+        private void cerrarProductoMasVendido(object sender, FormClosedEventArgs e)
+        {
+            productoMasVendido = null;
+        }
+
+        ProductoMenosVendido productoMenosVendido;
+        private void productoMenosVendidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (productoMenosVendido == null)
+            {
+                productoMenosVendido = new ProductoMenosVendido();
+                productoMenosVendido.MdiParent = this;
+                productoMenosVendido.FormClosed += new FormClosedEventHandler(cerrarProductoMenosVendido);
+                productoMenosVendido.Show();
+            }
+            else
+            {
+                productoMenosVendido.Activate();
+            }
+        }
+
+        private void cerrarProductoMenosVendido(object sender, FormClosedEventArgs e)
+        {
+            productoMenosVendido = null;
+        }
+
+        ClienteCompraMas clienteCompraMas;
+        private void ventasPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (clienteCompraMas == null)
+            {
+                clienteCompraMas = new ClienteCompraMas();
+                clienteCompraMas.MdiParent = this;
+                clienteCompraMas.FormClosed += new FormClosedEventHandler(cerrarVentasPorUsuario);
+                clienteCompraMas.Show();
+            }
+            else
+            {
+                clienteCompraMas.Activate();
+            }
+        }
+
+        private void cerrarVentasPorUsuario(object sender, FormClosedEventArgs e)
+        {
+            clienteCompraMas = null;
         }
     }
 }
